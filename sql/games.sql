@@ -6,12 +6,12 @@ CREATE TABLE games (
     coverImageURL VARCHAR(100) NOT NULL,
     spineImageURL VARCHAR(100) NOT NULL,
     discImageURL VARCHAR(100) NOT NULL,
-    price DECIMAL(2,2) NOT NULL
+    price DECIMAL(4,2) NOT NULL
     inStock BIT NOT NULL,
     synopsis VARCHAR(500) NOT NULL,	
     releaseDate DATE NOT NULL,
     developer VARCHAR(50),
-    rating DECIMAL(1,1),
+    rating DECIMAL(2,1),
     players VARCHAR(3)
 );
 
