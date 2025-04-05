@@ -1,0 +1,454 @@
+@font-face {
+    font-family: 'Futura Condensed Extra Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Futura Condensed Extra Bold'), url('./../fonts/Futura\ Condensed\ Extra\ Bold.otf') format('woff');
+}
+
+@font-face {
+    font-family: 'GameCube';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./../fonts/GameCube.ttf') format('opentype');
+}
+
+html, body
+{
+    overflow-x: hidden; 
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    font-family:"Futura Condensed Extra Bold", sans-serif;
+    background-image: linear-gradient(black, rgb(21, 0, 21));
+}
+/*Navigation*/
+.nav{
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 20px solid black;
+    background-image: linear-gradient(rgb(54, 0, 54), rgb(113, 0, 98), rgb(54, 0, 54));
+    padding-top: 30px;
+    z-index: 1;
+}
+.nav nav menu{
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+.nav div a img{
+    width: 30%;
+    height: auto;
+}
+.nav nav menu li{
+    padding: 0px 10px;
+    clip-path: polygon(20% 0%, 80% 0, 100% 100%, 0% 100%);
+    background-color: black;
+    border: 10px solid black;
+    margin: 0;
+    transition: 0.3s;
+}
+.nav nav menu li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #f4f4f4;
+    transition: 0.3s;
+    font-size: 20px;
+}
+.nav nav menu li a:hover{
+    color: #5e35b1;
+}
+/*Masthead*/
+#background-video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+.masthead{
+    height: 110vh;
+    width: 100%;
+    background-color: rgb(104, 0, 139, 0.3);
+}
+.heading a{
+    position: absolute;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0;
+    top: 47vh;
+    left: 10vh;
+    color: rgb(204, 204, 204);
+    text-shadow: 0 0 5px purple;
+    font-size: 11vh;
+    width: 30%;
+    font-family: "GameCube";
+    transition: 0.4s;
+    z-index: 2;
+}
+.heading a:hover{
+    text-shadow: 1px 1px 2px black, 0 0 15px purple;
+    text-decoration: underline;
+    color: white;
+}
+.gamecube-gif{
+    position: absolute;
+    top: 20vh;
+    right: 0;
+    height: 100%;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    z-index: -1;
+}
+main section{
+    box-shadow: 0 0 20px black;
+}
+/*Featured*/
+.featured{
+    padding: 10vh;
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url("./../img/bg/Super-Monkey-Ball/smb2-bg-1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.featured h2{
+    color: white;
+    text-decoration: underline;
+    font-size: 200%;
+}
+.featured-game{
+    padding: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.featured-game h3{
+    color: white;
+    font-size: 500%;
+    padding-right: 20vh;
+}
+.featured-game img{
+    width: 50%;
+    height: 50%;
+    border: 1px solid white;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.featured-game img:hover{
+    box-shadow: 0 0 20px yellow;
+
+}
+.gameplay-imgs {
+    display: flex;
+    overflow-x: auto;
+}
+.gameplay-imgs img {
+    height: 50vh;
+    width: 100%;
+    margin-right: 10px;
+    border: 1px solid pink;
+    filter: brightness(70%);
+    transition: 0.3s ease-in;
+}
+.gameplay-imgs img:hover{
+    filter: brightness(100%);
+}
+/*Newsletter Sign Up*/
+.newsletter{
+    background-image: linear-gradient(rgba(0, 96, 148, 0.1), rgba(0, 96, 148, 0.9)), url("./../img/bg/Animal-Crossing/animalcrossing-bg-1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh;
+}
+.newsletter form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh;
+    z-index: 1;
+}
+.newsletter h4{
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-size: 300%;
+}
+.newsletter-img1{
+    position: absolute;
+    width: 40vh;
+    height: auto;
+    left: 10vh;
+    transition: 0.4s;
+}
+.newsletter-img2{
+    position: absolute;
+    width: 30vh;
+    height: auto;
+    right: 15vh;
+    transition: 0.4s;
+}
+.newsletter-img1:hover{
+    width: 43vh;
+}
+.newsletter-img2:hover{
+    width: 33vh;
+}
+#fname, #lname, #email{
+    background-color: pink;
+    border: 2px solid black;
+    height: 8vh;
+    width: 55vh;
+    font-size: 130%;
+    padding-left: 20px;
+    margin: 5px;
+}
+#submit{
+    background-image: linear-gradient(rgb(133, 0, 133), rgb(188, 0, 163), rgb(133, 0, 133));
+    border: 3px solid black;
+    font-family: 'GameCube';
+    height: 5vh;
+    width: 100%;
+    font-size: 100%;
+    margin-top: 30px;
+    filter: brightness(70%);
+    transition: 0.3s;
+}
+#submit:hover{
+    font-size: 120%;
+    filter: brightness(100%);
+}
+::placeholder{
+    color: #ff51f9;
+    opacity: 80%;
+    text-decoration: none;
+    font-family: "Futura Condensed Extra Bold", sans-serif;
+}
+/*Footer*/
+footer section{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 50px;
+    background-image: linear-gradient(rgb(54, 0, 54), rgb(113, 0, 98), rgb(54, 0, 54));
+}
+footer p{
+    color: white;
+}
+footer img{
+    position: absolute;
+    right: 35vh;
+    height: 3%;
+    width: auto;
+    padding-top: 12px;
+}
+
+/*About Page*/
+.row-one, .row-two{
+    widtH: 100%;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.row-one{
+    background-color: rgb(104, 0, 139, 0.3);
+    widtH: 100%;
+}
+.row-one img{
+    width: 40%;
+    height: auto;
+    z-index: 1;
+    background-color: rgba(65, 0, 139, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+}
+.row-one h1, .row-two h2{
+    color: white;
+    font-family: "GameCube";
+    text-shadow: 0 0 5px black;
+    font-size: 5vh;
+}
+.row-two{
+    background-color: rgba(139, 0, 28, 0.3);
+}
+.row-two p{
+    font-size: 4vh;
+    color: white;
+    text-shadow: 4px 4px black;
+
+}
+.row-two p a:last-child{
+    text-decoration: none;
+    background-image: linear-gradient(rgba(67, 0, 148, 0.1), rgba(84, 0, 148, 0.9)), url("./../img/bg/F-Zero-GX/fzero-bg-1.jpg");
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+    text-shadow: 4px 4px black;
+    transition: 0.4s ease-in-out;
+}
+.row-two p a:last-child:hover{
+    padding-right: 20vh;
+    padding-left: 20vh;
+    background-image: linear-gradient(rgba(148, 0, 0, 0.1), rgba(66, 0, 0, 0.9)), url("./../img/bg/Metroid-Prime/b22b4f64-1fac-4c8b-9d8c-2a3037042e95.jpg");
+}
+
+/*Register Page*/
+.register-form, .register-form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.register-form{
+    width: 100%;
+    height: 150vh;
+}
+.register-form h1{
+    color: white;
+    font-size: 5vh;
+    text-shadow: 2px 2px 5px rgb(90, 0, 93);
+}
+.register-form form{
+    padding: 5vh;
+    background-color: rgba(65, 0, 139, 0.7);
+    border-radius: 10px;
+    width: 40vh;
+    height: 60vh;
+    border: 2px solid white;
+    box-shadow: 0 0 20px purple;
+}
+.login-link, .register-link{
+    color: white;
+}
+.register-img{
+    width: 40%;
+    height: auto;
+}
+#username, #password, #register-email, #password-confirm{
+    margin: 10px;
+    padding-left: 10px;
+    font-size: 3vh;
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(255, 179, 255);
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+/*Login Page*/
+.login-form, .login-form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-form{
+    width: 100%;
+    height: 150vh;
+}
+.login-form h1{
+    color: white;
+    font-size: 5vh;
+    text-shadow: 2px 2px 5px rgb(90, 0, 93);
+}
+.login-form form{
+    padding: 5vh;
+    background-color: rgba(65, 0, 139, 0.7);
+    border-radius: 10px;
+    width: 40vh;
+    height: 40vh;
+    border: 2px solid white;
+    box-shadow: 0 0 20px purple;
+}
+.login-img{
+    padding-top: 30px;
+    width: 30%;
+    height: auto;
+}
+
+/*Games page*/
+.games-display{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10vh;
+}
+.games-display h1{
+    font-size: 10vh;
+}
+.games-display table{
+    width: 60%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+}
+
+.game-heading, .game-info{
+    margin: 2vh;
+    border: 5px solid white;
+}
+.game-heading th, .game-info td{
+    padding-left: 10vh;
+    padding-right: 10vh;
+}
+.game-info td{
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+.game-info tr{
+    filter: brightness(80%);
+    background-image: linear-gradient(rgb(54, 0, 54), rgb(113, 0, 98), rgb(54, 0, 54));
+}
+.game-info tr:hover{
+    filter: brightness(100%);
+}
+.game-info div{
+    width: 20vh;
+    height: 20vh;
+}
+.game-info div p{
+    font-size: 5vh;
+    color: white;
+}
+/*Scrolling*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: rgba(65, 0, 139, 0.7);
+}
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 5px rgb(210, 127, 255);
+    background-color: rgb(104, 0, 139);
+}
+/*Animations*/
+@keyframes desc-animation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(200px);
+    }
+}
+
