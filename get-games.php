@@ -12,7 +12,7 @@ function getGames() {
         return $games;
     }
     else{
-        echo "Mysql Error: ". $conn->error;
+        echo "Error: ". $conn->error;
         return [];
     }
 }
