@@ -42,7 +42,6 @@ Games
 - Shadow The Hedgehog
 - F-Zero GX
 - Pokemon XD Gale Of Darkness
-- Wind Waker
 
 Info
 - Name
@@ -53,9 +52,6 @@ Info
 - Rating
 - Players
 - Link to images(background, render, cover/cover spine)
-
-ALTER TABLE Customers
-ADD Email varchar(255);
 */
 INSERT INTO games (name, bgImageUrl, renderImageURL, coverImageURL, spineImageURL, discImageURL, price, inStock, synopsis, releaseDate, developer, rating, players) VALUES
 ("Mario Kart Double Dash", 
